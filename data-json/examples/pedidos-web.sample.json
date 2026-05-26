@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "actualizadoEn": "2026-05-22T10:30:00-03:00",
+  "pedidos": [
+    {
+      "id": "web-10001",
+      "numero": "10001",
+      "canal": "tiendanube",
+      "fecha": "2026-05-22",
+      "cliente": {
+        "nombre": "Cliente Ejemplo",
+        "telefono": "1111111111",
+        "email": "cliente@example.com"
+      },
+      "estado": "pendiente_de_envio",
+      "tipoEnvio": "correo",
+      "items": [
+        {
+          "sku": "ABC123",
+          "descripcion": "Producto ejemplo",
+          "cantidad": 1
+        }
+      ],
+      "historial": [
+        {
+          "tipo": "importado",
+          "fechaHora": "2026-05-22T09:00:00-03:00",
+          "usuario": "sistema",
+          "origen": "tiendanube"
+        }
+      ]
+    }
+  ]
+}

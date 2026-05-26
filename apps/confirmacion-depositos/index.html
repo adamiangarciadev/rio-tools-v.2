@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CDPZFHV1BV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CDPZFHV1BV');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Confirmación de Depósitos - RIO</title>
+  <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="../../assets/rio-theme.css" />
+</head>
+<body>
+    <header class="container header-row header-bar module-topbar">
+        <a href="../../index.html" class="btn secondary back-btn">← Volver</a>
+
+        <div class="module-topbar__title">
+            <h1>CONFIRMACIÓN DE DEPÓSITOS</h1>
+            <p class="muted">Carga de comprobantes para administración</p>
+        </div>
+        <div class="module-topbar__spacer"></div>
+    </header>
+
+  <main class="container page-grid">
+    <section class="card">
+      <h2>Datos del depósito</h2>
+
+      <div class="grid">
+        <label>
+          Local
+          <select id="localSelect" class="input">
+            <option value="">Seleccionar local</option>
+            <option value="AV2">AV2</option>
+            <option value="NAZCA">NAZCA</option>
+            <option value="LAMARCA">LAMARCA</option>
+            <option value="CORRIENTES">CORRIENTES</option>
+            <option value="CASTELLI">CASTELLI</option>
+            <option value="QUILMES">QUILMES</option>
+            <option value="SARMIENTO">SARMIENTO</option>
+            <option value="PUEYRREDON">PUEYRREDON</option>
+            <option value="WEB">WEB</option>
+          </select>
+        </label>
+
+        <label>
+          Monto
+          <input id="montoInput" class="input" type="text" placeholder="Ej: 125000" />
+        </label>
+
+        <label>
+          Cuenta donde depositaron
+          <select id="cuentaSelect" class="input">
+            <option value="">Seleccionar cuenta</option>
+            <option value="Santander - Lucia Catera">Santander - Lucia Catera</option>
+            <option value="BBVA Frances - Lucia Catera">BBVA Frances - Lucia Catera</option>
+            <option value="Galicia - 2021 Sociedad Anonima">Galicia - 2021 Sociedad Anonima</option>
+            <option value="Galicia - Natalia Vanesa Scipioni">Galicia - Natalia Vanesa Scipioni</option>
+            <option value="Santander - Anlux SA">Santander - Anlux SA</option>
+            <option value="Santander - 2021 Sociedad Anonima">Santander - 2021 Sociedad Anonima</option>
+            <option value="Santander - 1988 SRL">Santander - 1988 SRL</option>
+            <option value="Santander - Rio Group SRL">Santander - Rio Group SRL</option>
+            <option value="Santander - Johanna Suets">Santander - Johanna Suets</option>
+            <option value="Santander - Infantino Fernando">Santander - Infantino Fernando</option>
+            <option value="Galicia - 1988 SRL">Galicia - 1988 SRL</option>
+            <option value="Supervielle - Nexus Realty SA">Supervielle - Nexus Realty SA</option>
+          </select>
+        </label>
+
+        <label style="grid-column: 1 / -1;">
+          Observación
+          <textarea id="obsInput" class="input area" placeholder="Cliente en local / observación adicional"></textarea>
+        </label>
+
+        <div style="grid-column: 1 / -1;">
+          <label class="filebox">
+            <span>Subir comprobante</span>
+            <input id="fileInput" type="file" accept="image/*,.pdf" />
+          </label>
+          <div id="fileName" class="muted small">Ningún archivo seleccionado</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="saveBtn" class="btn primary">Guardar depósito</button>
+        <span id="status" class="muted"></span>
+      </div>
+    </section>
+
+    <aside class="card side-panel">
+      <div class="side-head">
+        <h2 id="recentTitle">Últimas 72 hs</h2>
+        <button id="refreshBtn" class="btn secondary">Actualizar</button>
+      </div>
+
+      <div id="depositList" class="deposit-list">
+        <div class="muted">Cargando depósitos...</div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

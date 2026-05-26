@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "actualizadoEn": "2026-05-22T10:30:00-03:00",
+  "remitos": [
+    {
+      "id": "rem-20260522-0001",
+      "numero": "000123",
+      "fecha": "2026-05-22",
+      "origen": "deposito",
+      "destino": "sarmiento",
+      "estado": "en_transito",
+      "creadoPor": "Damian",
+      "items": [
+        {
+          "sku": "ABC123",
+          "descripcion": "Producto ejemplo",
+          "cantidad": 10
+        }
+      ],
+      "eventos": [
+        {
+          "tipo": "creado",
+          "fechaHora": "2026-05-22T09:45:00-03:00",
+          "usuario": "Damian",
+          "nota": "Remito generado desde deposito."
+        },
+        {
+          "tipo": "despachado",
+          "fechaHora": "2026-05-22T10:30:00-03:00",
+          "usuario": "Deposito",
+          "nota": "Sale hacia sucursal."
+        }
+      ]
+    }
+  ]
+}

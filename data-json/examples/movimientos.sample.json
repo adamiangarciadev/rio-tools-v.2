@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "actualizadoEn": "2026-05-22T10:30:00-03:00",
+  "movimientos": [
+    {
+      "id": "mov-20260522-0001",
+      "fechaHora": "2026-05-22T10:30:00-03:00",
+      "tipo": "salida",
+      "origen": "deposito",
+      "destino": "sarmiento",
+      "referenciaTipo": "remito",
+      "referenciaId": "rem-20260522-0001",
+      "usuario": "Deposito",
+      "items": [
+        {
+          "sku": "ABC123",
+          "cantidad": 10
+        }
+      ],
+      "observaciones": "Salida registrada para control de transito."
+    }
+  ]
+}

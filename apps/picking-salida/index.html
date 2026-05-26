@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CDPZFHV1BV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CDPZFHV1BV');
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pickeo SALIDA - RIO</title>
+  <meta name="description" content="App 100% front-end para pickeo con escáner (Zebra/HID) y descarga de TXT." />
+  <link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="../../assets/rio-theme.css" />
+</head>
+<body>
+  <header class="container header-row module-topbar">
+    <a href="../../index.html" class="btn ghost">← Volver</a>
+    <div class="module-topbar__title">
+      <h1>SALIDA DE MERCADERIA</h1>
+    </div>
+    <div class="module-topbar__actions">
+      <div id="readyPill" class="pill hidden" aria-live="polite" title="Estado">
+      <span class="dot"></span><span id="pillText">Cargando…</span>
+    </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Configurar pickeo</h2>
+      <div class="row">
+        <label>Responsable
+          <select id="respSelect" class="input"></select>
+        </label>
+        <label>Origen
+          <select id="origenSelect" class="input"></select>
+        </label>
+        <label>Destino
+          <select id="destinoSelect" class="input"></select>
+        </label>
+        <label>Bultos
+          <input id="bultosInput" type="text" inputmode="numeric" pattern="\d*" placeholder="Cantidad" class="input" />
+        </label>
+        <div class="field field-inline">
+  <div class="field-grow">
+    <label for="remitoInput">Número de remito</label>
+    <input id="remitoInput" type="text" placeholder="Solo números" />
+  </div>
+
+  <!-- BOTÓN GUARDAR (el mismo de antes) -->
+  <button
+    id="downloadBtn"
+    class="btn-primary btn-guardar-inline"
+    type="button"
+  >
+    GUARDAR
+  </button>
+</div>
+
+    </section>
+
+    <section class="card">
+      <h2>Pickeo</h2>
+      <p class="muted small">La app carga automáticamente <code>equivalencia.csv</code> y <code>equivalencias2.csv</code> si existen en la carpeta.</p>
+      <div class="scan-wrap">
+        <input id="scanInput" class="scan-input" type="text" placeholder="Escaneá el código…" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus />
+        <div class="scan-meta">
+          <span id="scanCount" class="badge">0 escaneados</span>
+          <span id="noti" class="muted"></span>
+        </div>
+      </div>
+      <div id="lastScans" class="last-scans"></div>
+      <div class="pick-list-head">
+  <span>Pickeado</span>
+  <span class="muted small">Eliminar borra 1 ocurrencia</span>
+</div>
+<div id="pickList" class="pick-list"></div>
+
+    </section>
+
+<section class="panel" id="panel-counter">
+  <h3 class="panel-title">Conteo por artículo</h3>
+  <div id="artCounter" class="art-counter muted">Sin escaneos.</div>
+</section>
+ 
+  </main>
+
+
+  <footer class="container foot muted">
+        RIO Tools Suite | Plataforma operativa interna 
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

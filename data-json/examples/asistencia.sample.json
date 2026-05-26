@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "fecha": "2026-05-22",
+  "actualizadoEn": "2026-05-22T10:30:00-03:00",
+  "eventos": [
+    {
+      "id": "asi-20260522-0001",
+      "empleadoId": "emp-001",
+      "fechaHora": "2026-05-22T08:59:00-03:00",
+      "tipo": "entrada",
+      "sucursal": "sarmiento",
+      "origen": "web",
+      "observaciones": ""
+    }
+  ]
+}

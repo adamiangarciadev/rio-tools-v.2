@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "actualizadoEn": "2026-05-22T10:30:00-03:00",
+  "empleados": [
+    {
+      "id": "emp-001",
+      "legajo": "001",
+      "nombre": "Empleado Ejemplo",
+      "dni": "00000000",
+      "sucursal": "sarmiento",
+      "puesto": "ventas",
+      "activo": true
+    }
+  ]
+}

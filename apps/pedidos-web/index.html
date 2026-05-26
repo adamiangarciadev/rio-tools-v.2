@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CDPZFHV1BV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CDPZFHV1BV');
+</script>
+  <meta charset="UTF-8" />
+  <title>Pedidos Web - RIO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="../../assets/rio-theme.css" />
+</head>
+
+<body>
+  <header class="topbar module-topbar">
+    <a href="../../index.html" class="btn ghost">← Volver</a>
+    <div class="module-topbar__title"><h1>Pedidos Web - RIO</h1></div>
+    <div class="module-topbar__actions"><div class="top-bar">
+      <button id="btnWhatsapp" class="btn whatsapp-btn" type="button">Cargar WhatsApp</button>
+      <span id="estadoCarga"></span>
+    </div></div>
+  </header>
+
+  <main>
+    <div class="buscador-row">
+      <label for="q" class="buscador-label">Buscar</label>
+      <input id="q" class="buscador-input" type="search" placeholder="ID, cliente, DNI, estado, canal, sucursal, envío..." autocomplete="off" />
+      <button id="btnLimpiar" class="buscador-clear" type="button">Limpiar</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Canal</th>
+          <th>ID Pedido</th>
+          <th>Cliente</th>
+          <th>DNI</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+          <th>Último usuario</th>
+          <th>Envío / Retiro</th>
+        </tr>
+
+
+
+      </thead>
+
+      <tbody id="tablaPedidos">
+        <!-- Se llena por JS -->
+      </tbody>
+    </table>
+  </main>
+
+  <div class="modal-backdrop" id="whatsappModal" hidden>
+    <section class="whatsapp-modal" role="dialog" aria-modal="true" aria-labelledby="whatsappModalTitle">
+      <div class="modal-head">
+        <div>
+          <p class="modal-kicker">Carga manual</p>
+          <h2 id="whatsappModalTitle">Pedido de WhatsApp</h2>
+        </div>
+        <button id="btnCerrarWhatsapp" class="modal-close" type="button" aria-label="Cerrar">×</button>
+      </div>
+
+      <form id="whatsappForm" class="whatsapp-form">
+        <label>
+          Cliente
+          <input id="wspCliente" name="cliente" type="text" autocomplete="name" required />
+        </label>
+
+        <label>
+          DNI
+          <input id="wspDni" name="dni" type="text" inputmode="numeric" />
+        </label>
+
+        <label>
+          Envío / retiro
+          <select id="wspTipoEnvio" name="tipo_envio">
+            <option value="RETIRO">Retiro</option>
+            <option value="ENVÍO">Envío</option>
+            <option value="SHIPNOW">Shipnow</option>
+          </select>
+        </label>
+
+        <label>
+          Número de remito <span class="optional">(si tiene)</span>
+          <input id="wspRemito" name="remito" type="text" inputmode="numeric" />
+        </label>
+
+        <label>
+          Usuario
+          <input id="wspUsuario" name="usuario" type="text" placeholder="Quién carga" required />
+        </label>
+
+        <div class="modal-actions">
+          <button class="btn ghost" id="btnCancelarWhatsapp" type="button">Cancelar</button>
+          <button class="btn primary" type="submit">Guardar pedido</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+  <footer>
+    RIO Tools Suite | Plataforma operativa interna 
+  </footer>
+</body>
+</html>

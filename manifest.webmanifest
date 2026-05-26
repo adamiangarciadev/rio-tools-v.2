@@ -1,0 +1,10 @@
+{
+  "name": "RIO Tools Suite",
+  "short_name": "RIO Tools",
+  "description": "Suite operativa para procesos internos de RIO.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090d12",
+  "theme_color": "#22c7b8",
+  "icons": []
+}

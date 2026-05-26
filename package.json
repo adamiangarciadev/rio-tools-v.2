@@ -1,0 +1,16 @@
+{
+  "name": "rio-tools-suite",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Suite operativa estatica para procesos internos de RIO.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "check": "npm run build"
+  },
+  "devDependencies": {
+    "vite": "^8.0.14"
+  }
+}
